@@ -7,29 +7,41 @@
 
 import SwiftUI
 
-struct Locations: Identifiable {
-    var id = UUID()
-    var name = String()
-    var country = String()
-}
-
-let testData: [Locations] = [Locations(name: "Beijing", country: "China"),Locations(name: "Toronto", country: "Canada"),Locations(name: "Seattle", country: "USA")]
+//struct Locations: Identifiable {
+//    var id = UUID()
+//    var image = String()
+//    var name = String()
+//    var country = String()
+//}
+//
+//let testData: [Locations] = [
+//    Locations(image: "beijing", name: "Beijing", country: "China"),
+//    Locations(image: "toronto", name: "Toronto", country: "Canada"),
+//    Locations(image: "seattle", name: "Seattle", country: "USA")]
 
 struct ContentView: View {
+    
+    @ObservedObject var store: LocationStore
+    
     var body: some View {
         
-        List(testData) { location in
-            
-            NavigationLink(destination: LocationDetail()){
-                VStack(alignment: .leading) {
-                    Text(location.name)
-                    Text(location.country)
-                        .font(.subheadline)
+        NavigationView{
+            List{
+                ForEach(store.locations) { location in
+                    LocationCell(location: location)
+                }
+                
+                HStack {
+                    Spacer()
+                    Text("\(store.locations.count) Locations")
+                        .foregroundColor(.secondary)
+                    Spacer()
                 }
             }
-            
+            .navigationTitle("Location")
+
         }
-        .navigationTitle("Locations")
+        
         
     }
 }
@@ -37,7 +49,31 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView{
-            ContentView()
+            ContentView(store: testStore)
+        }
+    }
+}
+
+struct LocationCell: View {
+    var location: Location
+    
+    var body: some View {
+        NavigationLink(destination: LocationDetail(location: location)){
+            HStack {
+                Image(location.image)
+                    .resizable()
+                    .cornerRadius(8)
+                    .scaledToFit()
+                    .frame(width: 44, height: 44)
+                
+                VStack(alignment: .leading) {
+                    Text(location.name)
+                    Text(location.country)
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                }
+            }
+
         }
     }
 }

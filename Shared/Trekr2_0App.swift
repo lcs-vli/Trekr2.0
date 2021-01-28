@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct Trekr2_0App: App {
+    @StateObject private var store = LocationStore()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(store: store)
         }
     }
 }

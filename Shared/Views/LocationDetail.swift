@@ -8,13 +8,34 @@
 import SwiftUI
 
 struct LocationDetail: View {
+    var location: Location
+    @State private var zoomed = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        ScrollView{
+            
+            VStack{
+                Spacer(minLength: 0)
+                
+                Image(location.image)
+                    .resizable()
+                    .aspectRatio(contentMode: zoomed ? .fill : .fit)
+                    .onTapGesture {
+                        withAnimation {
+                            zoomed.toggle()
+                        }
+                    }
+                
+            }
+            
+        }
+        
     }
 }
 
 struct LocationDetail_Previews: PreviewProvider {
     static var previews: some View {
-        LocationDetail()
+        LocationDetail(location: testData[1])
     }
 }
