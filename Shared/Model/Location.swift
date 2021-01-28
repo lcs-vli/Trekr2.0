@@ -19,7 +19,7 @@ class Location: Identifiable, ObservableObject {
     var picture: String?
     var rating: Rating
     
-    internal init(id: UUID = UUID(), name: String, countryL String, description: String, more: String?, latitude: Double?, longitude: Double?, picture: String?, rating: Rating){
+    internal init(id: UUID = UUID(), name: String, country: String, description: String, more: String?, latitude: Double?, longitude: Double?, picture: String?, rating: Rating){
         self.id = id
         self.name = name
         self.country = country
@@ -33,5 +33,6 @@ class Location: Identifiable, ObservableObject {
 }
 
 let testData = [
-    Location(id: <#T##UUID#>, name: <#T##String#>, countryL: <#T##<<error type>>#>, description: <#T##String#>, more: <#T##String?#>, latitude: <#T##Double?#>, longitude: <#T##Double?#>, picture: <#T##String?#>)
+    Location(name: "Toronto", country: "Canada", description: "I lived there during Chirstams brak", more: "it was fun", latitude: 43.6532, longitude: 79.3832, picture: "toronto", rating: 5)
+    Location(name: "Beijing", country: "China", description: "My home", more: "the food is the best", latitude: 39.9042, longitude: 116.4074, picture: "beijing", rating: 5)
 ]
