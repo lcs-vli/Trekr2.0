@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		546111FC25C338F100784C1E /* LocationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546111FB25C338F100784C1E /* LocationList.swift */; };
 		54EEACE425C31C3100F292CE /* Trekr2_0App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EEACD125C31C2C00F292CE /* Trekr2_0App.swift */; };
 		54EEACE525C31C3100F292CE /* Trekr2_0App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EEACD125C31C2C00F292CE /* Trekr2_0App.swift */; };
 		54EEACE625C31C3100F292CE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EEACD225C31C2C00F292CE /* ContentView.swift */; };
@@ -18,7 +17,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		546111FB25C338F100784C1E /* LocationList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationList.swift; sourceTree = "<group>"; };
 		54EEACD125C31C2C00F292CE /* Trekr2_0App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trekr2_0App.swift; sourceTree = "<group>"; };
 		54EEACD225C31C2C00F292CE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		54EEACD325C31C3000F292CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -97,7 +95,6 @@
 		54EEACF525C31C7C00F292CE /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				546111FB25C338F100784C1E /* LocationList.swift */,
 				54EEACD225C31C2C00F292CE /* ContentView.swift */,
 				54EEAD0425C3251100F292CE /* LocationDetail.swift */,
 			);
@@ -201,7 +198,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				546111FC25C338F100784C1E /* LocationList.swift in Sources */,
 				54EEACE625C31C3100F292CE /* ContentView.swift in Sources */,
 				54EEAD0525C3251100F292CE /* LocationDetail.swift in Sources */,
 				54EEACE425C31C3100F292CE /* Trekr2_0App.swift in Sources */,
