@@ -33,15 +33,23 @@ struct LocationDetail: View {
                         .font(.title3)
                         .foregroundColor(.secondary)
                         .multilineTextAlignment(.leading)
-                        .padding(.bottom)
-                    
+                        
                     Spacer()
+                }
+                .padding(.horizontal)
+                
+                HStack{
+                    Text("Rating: ")
+                        .font(.title3)
+                        .bold()
+                        .padding(.vertical)
+                    
+                    Text(location.rating)
                 }
                 .padding(.horizontal)
                 
                 Text(location.description)
                     .padding(.horizontal)
-                
             }
             
         }

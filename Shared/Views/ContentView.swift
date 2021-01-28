@@ -64,7 +64,7 @@ struct LocationCell: View {
                     .resizable()
                     .cornerRadius(8)
                     .scaledToFit()
-                    .frame(width: 44, height: 44)
+                    .frame(width: 50, height: 50)
                 
                 VStack(alignment: .leading) {
                     Text(location.name)
