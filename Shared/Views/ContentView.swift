@@ -38,6 +38,7 @@ struct ContentView: View {
                     Spacer()
                 }
             }
+           
             .navigationTitle("Location")
 
         }
@@ -60,11 +61,11 @@ struct LocationCell: View {
     var body: some View {
         NavigationLink(destination: LocationDetail(location: location)){
             HStack {
-                Image(location.image)
+                Image(systemName: "airplane")
                     .resizable()
                     .cornerRadius(8)
                     .scaledToFit()
-                    .frame(width: 50, height: 50)
+                    .frame(width: 20, height: 20)
                 
                 VStack(alignment: .leading) {
                     Text(location.name)
