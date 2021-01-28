@@ -21,21 +21,39 @@ struct LocationDetail: View {
                 Image(location.image)
                     .resizable()
                     .aspectRatio(contentMode: zoomed ? .fill : .fit)
+                    .padding([.top, .leading, .trailing])
                     .onTapGesture {
                         withAnimation {
                             zoomed.toggle()
                         }
                     }
                 
+                HStack {
+                    Text(location.country)
+                        .font(.title3)
+                        .foregroundColor(.secondary)
+                        .multilineTextAlignment(.leading)
+                        .padding(.bottom)
+                    
+                    Spacer()
+                }
+                .padding(.horizontal)
+                
+                Text(location.description)
+                    .padding(.horizontal)
+                
             }
             
         }
+        .navigationTitle(location.name)
         
     }
 }
 
 struct LocationDetail_Previews: PreviewProvider {
     static var previews: some View {
-        LocationDetail(location: testData[1])
+        NavigationView{
+            LocationDetail(location: testData[0])
+        }
     }
 }
