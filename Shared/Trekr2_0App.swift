@@ -13,7 +13,33 @@ struct Trekr2_0App: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView(store: store)
+            TabView{
+                
+                NavigationView {
+                    ContentView(store: store)
+                }
+                .tabItem {
+                    Image(systemName: "list.bullet")
+                    Text("Locations")
+                }
+                
+                NavigationView {
+                    ContentView(store: store)
+                }
+                .tabItem {
+                    Image(systemName: "map")
+                    Text("Map")
+                }
+                
+                NavigationView {
+                    ContentView(store: store)
+                }
+                .tabItem {
+                    Image(systemName: "star.fill")
+                    Text("Random Pic")
+                }
+                
+            }
         }
     }
 }

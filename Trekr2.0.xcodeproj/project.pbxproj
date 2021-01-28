@@ -16,6 +16,7 @@
 		54EEACE925C31C3100F292CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54EEACD325C31C3000F292CE /* Assets.xcassets */; };
 		54EEAD0525C3251100F292CE /* LocationDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EEAD0425C3251100F292CE /* LocationDetail.swift */; };
 		54F5F2B825C367A900C4D111 /* LocationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F5F2B725C367A900C4D111 /* LocationStore.swift */; };
+		54F5F2BC25C3804600C4D111 /* WorldMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F5F2BB25C3804600C4D111 /* WorldMap.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		54EEACE325C31C3100F292CE /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		54EEAD0425C3251100F292CE /* LocationDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetail.swift; sourceTree = "<group>"; };
 		54F5F2B725C367A900C4D111 /* LocationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationStore.swift; sourceTree = "<group>"; };
+		54F5F2BB25C3804600C4D111 /* WorldMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldMap.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 			children = (
 				54EEACD225C31C2C00F292CE /* ContentView.swift */,
 				54EEAD0425C3251100F292CE /* LocationDetail.swift */,
+				54F5F2BB25C3804600C4D111 /* WorldMap.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				54F5F2B825C367A900C4D111 /* LocationStore.swift in Sources */,
+				54F5F2BC25C3804600C4D111 /* WorldMap.swift in Sources */,
 				54EEACE625C31C3100F292CE /* ContentView.swift in Sources */,
 				54EEAD0525C3251100F292CE /* LocationDetail.swift in Sources */,
 				5461120725C3663900784C1E /* Location.swift in Sources */,
