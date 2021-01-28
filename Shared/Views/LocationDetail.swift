@@ -50,6 +50,8 @@ struct LocationDetail: View {
                 
                 Text(location.description)
                     .padding(.horizontal)
+                    .padding(.bottom)
+            
             }
             
         }

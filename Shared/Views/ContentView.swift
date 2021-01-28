@@ -25,23 +25,21 @@ struct ContentView: View {
     
     var body: some View {
         
-        NavigationView{
-            List{
-                ForEach(store.locations) { location in
-                    LocationCell(location: location)
-                }
-                
-                HStack {
-                    Spacer()
-                    Text("\(store.locations.count) Locations")
-                        .foregroundColor(.secondary)
-                    Spacer()
-                }
+        List{
+            ForEach(store.locations) { location in
+                LocationCell(location: location)
             }
-           
-            .navigationTitle("Location")
-
+            
+            HStack {
+                Spacer()
+                Text("\(store.locations.count) Locations")
+                    .foregroundColor(.secondary)
+                Spacer()
+            }
+            
         }
+        
+        .navigationTitle("Location")
         
         
     }
@@ -74,7 +72,7 @@ struct LocationCell: View {
                         .foregroundColor(.secondary)
                 }
             }
-
+            
         }
     }
 }
