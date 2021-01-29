@@ -16,6 +16,11 @@ struct RandomPic: View {
                 .scaledToFit()
                 .padding(.all)
             
+            Text("This picture is from last summer.")
+                .padding(.vertical)
+                .font(.title3)
+                .foregroundColor(.secondary)
+            
             Text("I went there with my family and our dog. It was realy fun.")
                 .padding(.all)
             

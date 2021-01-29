@@ -38,8 +38,27 @@ struct ContentView: View {
             }
         }
         .navigationTitle("Location")
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing){
+                EditButton()
+            }
+            ToolbarItem(placement: .navigationBarLeading){
+                Button("Add", action: placeholder)
+            }
+        }
+        
     }
+    
+    func placeholder(){
+        withAnimation {
+            store.locations.append(Location(name: "hi", country: " ", image: " ", rating: " ", description: " ", latitude: 1, longitude: 2))
+        }
+    }
+    
+    
 }
+
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

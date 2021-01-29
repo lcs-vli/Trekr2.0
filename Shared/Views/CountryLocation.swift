@@ -17,53 +17,32 @@ struct CountryLocation: View {
             
             
             HStack {
-                Image(systemName: "flag.fill")
+                Image(systemName: "airplane")
                     .resizable()
                     .cornerRadius(8)
                     .scaledToFit()
                     .frame(width: 20, height: 20)
                 
-                Text("China")
+                Text("Beijing")
                 
             }
             
             HStack {
-                Image(systemName: "flag.fill")
+                Image(systemName: "airplane")
                     .resizable()
                     .cornerRadius(8)
                     .scaledToFit()
                     .frame(width: 20, height: 20)
                 
-                Text("Canada")
+                Text("Chengde")
                 
             }
             
-            HStack {
-                Image(systemName: "flag.fill")
-                    .resizable()
-                    .cornerRadius(8)
-                    .scaledToFit()
-                    .frame(width: 20, height: 20)
-                
-                Text("Japan")
-                
-            }
-            
-            HStack {
-                Image(systemName: "flag.fill")
-                    .resizable()
-                    .cornerRadius(8)
-                    .scaledToFit()
-                    .frame(width: 20, height: 20)
-                
-                Text("U.S.")
-                
-            }
             
             
             
         }
-        .navigationTitle("Countries")
+        .navigationTitle("Locations in China")
         
     }
 }
