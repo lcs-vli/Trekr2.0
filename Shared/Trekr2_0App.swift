@@ -16,7 +16,7 @@ struct Trekr2_0App: App {
             TabView{
                 
                 NavigationView {
-                    ContentView(store: store)
+                    ContentView(store: testStore)
                 }
                 .tabItem {
                     Image(systemName: "list.bullet")
@@ -24,7 +24,7 @@ struct Trekr2_0App: App {
                 }
                 
                 NavigationView {
-                    ContentView(store: store)
+                    WorldMap(store: testStore)
                 }
                 .tabItem {
                     Image(systemName: "map")
@@ -32,7 +32,7 @@ struct Trekr2_0App: App {
                 }
                 
                 NavigationView {
-                    ContentView(store: store)
+                    RandomPic()
                 }
                 .tabItem {
                     Image(systemName: "star.fill")

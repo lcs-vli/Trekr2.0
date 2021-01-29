@@ -36,12 +36,8 @@ struct ContentView: View {
                     .foregroundColor(.secondary)
                 Spacer()
             }
-            
         }
-        
         .navigationTitle("Location")
-        
-        
     }
 }
 

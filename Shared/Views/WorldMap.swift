@@ -24,7 +24,7 @@ struct WorldMap: View {
             
             MapAnnotation(coordinate: CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)) {
                 
-                NavigationLink(destination: LocationDetail(location: location)){
+                NavigationLink(destination: CountryLocation()){
                     Image(location.country)
                         .resizable()
                         .cornerRadius(10)
