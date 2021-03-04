@@ -7,18 +7,6 @@
 
 import SwiftUI
 
-//struct Locations: Identifiable {
-//    var id = UUID()
-//    var image = String()
-//    var name = String()
-//    var country = String()
-//}
-//
-//let testData: [Locations] = [
-//    Locations(image: "beijing", name: "Beijing", country: "China"),
-//    Locations(image: "toronto", name: "Toronto", country: "Canada"),
-//    Locations(image: "seattle", name: "Seattle", country: "USA")]
-
 struct ContentView: View {
     
     @ObservedObject var store: LocationStore
@@ -35,7 +23,7 @@ struct ContentView: View {
             
             HStack {
                 Spacer()
-                Text("\(store.locations.count) Locations")
+                Text("\(store.places.count) Locations")
                     .foregroundColor(.secondary)
                 Spacer()
             }
@@ -49,17 +37,13 @@ struct ContentView: View {
                 }
             }
         }
-        
         .sheet(isPresented: $showingAddLocation) {
             AddLocation(store: testStore, showing: $showingAddLocation)
         }
         
     }
 
-    
-    
 }
-
 
 
 struct ContentView_Previews: PreviewProvider {

@@ -18,15 +18,15 @@ struct LocationDetail: View {
             VStack{
                 Spacer(minLength: 0)
                 
-                Image(location.image)
-                    .resizable()
-                    .aspectRatio(contentMode: zoomed ? .fill : .fit)
-                    .padding([.top, .leading, .trailing])
-                    .onTapGesture {
-                        withAnimation {
-                            zoomed.toggle()
-                        }
-                    }
+//                Image(location.image)
+//                    .resizable()
+//                    .aspectRatio(contentMode: zoomed ? .fill : .fit)
+//                    .padding([.top, .leading, .trailing])
+//                    .onTapGesture {
+//                        withAnimation {
+//                            zoomed.toggle()
+//                        }
+//                    }
                 
                 HStack {
                     Text(location.country)
@@ -44,7 +44,8 @@ struct LocationDetail: View {
                         .bold()
                         .padding(.vertical)
                     
-                    Text(location.rating)
+                    Text(location.rating.rawValue)
+                    
                 }
                 .padding(.horizontal)
                 

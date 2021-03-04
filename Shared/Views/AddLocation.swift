@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct AddLocation: View {
-    // Get a reference to the store of tasks (TaskStore)
+    // Get a reference to the store of locations (LocationStore)
     @ObservedObject var store: LocationStore
     
-    // Details of the new task
+    // Details of the new location
     @State private var name = ""
     @State private var country = ""
     @State private var rating = Rating.five
@@ -55,11 +55,10 @@ struct AddLocation: View {
     func saveTask() {
         
         // Add the task to the list of tasks
-        store.testStore.append(Location(name: name,
-                                county: country,
-                                rating = rating,
-                                description = description
-                                completed: false))
+        store.places.append(Location(name: name,
+                                     country: country,
+                                     rating: rating,
+                                     description: description))
         
         // Dismiss this view
         showing = false
