@@ -24,7 +24,7 @@ struct ContentView: View {
     @ObservedObject var store: LocationStore
     
     // Controls whether the add task is showing
-    @State private var showingAddCountry = false
+    @State private var showingAddLocation = false
     
     var body: some View {
         
@@ -45,13 +45,13 @@ struct ContentView: View {
         .toolbar {
             ToolbarItem(placement: .primaryAction){
                 Button("Add"){
-                    showingAddCountry = true
+                    showingAddLocation = true
                 }
             }
         }
         
-        .sheet(isPresented: $showingAddCountry) {
-            AddCountry(store: testStore, showing: $showingAddCountry)
+        .sheet(isPresented: $showingAddLocation) {
+            AddLocation(store: testStore, showing: $showingAddLocation)
         }
         
     }

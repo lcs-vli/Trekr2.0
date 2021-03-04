@@ -7,17 +7,15 @@
 
 import SwiftUI
 
-struct AddCountry: View {
+struct AddLocation: View {
     // Get a reference to the store of tasks (TaskStore)
     @ObservedObject var store: LocationStore
     
     // Details of the new task
     @State private var name = ""
     @State private var country = ""
-    @State private var rating = ""
+    @State private var rating = Rating.five
     @State private var description = ""
-    @State private var latitude = 0.0
-    @State private var longitude = 0.0
     
     // Whether to show this view
     @Binding var showing: Bool
@@ -26,18 +24,24 @@ struct AddCountry: View {
         NavigationView {
             VStack {
                 Form {
-                    TextField("Description", text: $description)
+                    TextField("Name", text: $name)
                     
-                    Picker("Priority", selection: $priority) {
-                        Text(TaskPriority.low.rawValue).tag(TaskPriority.low)
-                        Text(TaskPriority.medium.rawValue).tag(TaskPriority.medium)
-                        Text(TaskPriority.high.rawValue).tag(TaskPriority.high)
+                    TextField("country", text: $country)
+                    
+                    Picker("Rating", selection: $rating) {
+                        Text(Rating.five.rawValue).tag(Rating.five)
+                        Text(Rating.four.rawValue).tag(Rating.four)
+                        Text(Rating.three.rawValue).tag(Rating.three)
+                        Text(Rating.two.rawValue).tag(Rating.two)
+                        Text(Rating.one.rawValue).tag(Rating.one)
                     }
                     .pickerStyle(SegmentedPickerStyle())
+                    
+                    TextField("description", text: $description)
 
                 }
             }
-            .navigationTitle("New Reminder")
+            .navigationTitle("New Location")
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
                     Button("Save") {
@@ -51,8 +55,10 @@ struct AddCountry: View {
     func saveTask() {
         
         // Add the task to the list of tasks
-        store.tasks.append(Task(description: description,
-                                priority: priority,
+        store.testStore.append(Location(name: name,
+                                county: country,
+                                rating = rating,
+                                description = description
                                 completed: false))
         
         // Dismiss this view
@@ -62,9 +68,9 @@ struct AddCountry: View {
 
 }
 
-struct AddCountry_Previews: PreviewProvider {
+struct AddLocation_Previews: PreviewProvider {
     static var previews: some View {
-        AddCountry(store: testStore, showing: .constant(true))
+        AddLocation(store: testStore, showing: .constant(true))
     }
 }
 
