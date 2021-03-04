@@ -8,7 +8,22 @@
 import Foundation
 
 class LocationStore: ObservableObject {
-    var places: [Location]
+    
+    
+    @Published var places: [Location] {
+        
+        //this property observer will fire when a locatoin is added
+        didSet {
+            
+            let encoder = JSONEncoder()
+            if let encoded = try? encoder.encode(places) {
+                
+                print("Saving locations list now...")
+                
+                UserDefaults.standard.setValue(encoded, forKey: "places")
+            }
+        }
+    }
 
     init(locations: [Location] = []) {
         self.places = locations
