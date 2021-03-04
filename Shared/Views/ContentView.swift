@@ -40,7 +40,18 @@ struct ContentView: View {
         .sheet(isPresented: $showingAddLocation) {
             AddLocation(store: testStore, showing: $showingAddLocation)
         }
-        
+        // When the app is quit or backgrounded, this closure will run
+        .onReceive(NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification)) { _ in
+            
+            // Save the list of tasks
+            let encoder = JSONEncoder()
+            if let encoded = try? encoder.encode(store.places) {
+                print("Saving locations list now, app has been backgrounded or quit...")
+                // Actually save the tasks to UserDefaults
+                UserDefaults.standard.setValue(encoded, forKey: "places")
+            }
+
+        }
     }
 
 }
