@@ -7,7 +7,15 @@
 
 import Foundation
 
-struct Location: Decodable, Identifiable {
+// Identify what properties should be read to and written from JSON
+enum TaskCodingKeys: CodingKey {
+    case name
+    case country
+    case rating
+    case description
+}
+
+class Location: Identifiable, ObservableObject, Codable {
     var id = UUID()
     var name: String
     var country: String
@@ -16,6 +24,41 @@ struct Location: Decodable, Identifiable {
     var description: String
     //var latitude: Double
     //var longitude: Double
+
+    internal init(id: UUID = UUID(), name: String, country: String, rating: Rating, description: String) {
+        self.id = id
+        self.name = name
+        self.country = country
+        self.rating = rating
+        self.description = description
+    }
+    
+    // Provide details for how to decode from JSON into an instance of this data type
+    required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: TaskCodingKeys.self)
+        
+        // Decode "name" property into an instance of the String type
+        self.name = try container.decode(String.self, forKey: .name)
+        // Decode "country" property into an instance of the String type
+        self.country = try container.decode(String.self, forKey: .country)
+        // Decode "rating" property into an instance of the Rating type
+        self.rating = try container.decode(Rating.self, forKey: .rating)
+        // Decode "description" property into an instance of the String type
+        self.description = try container.decode(String.self, forKey: .description)
+    }
+    
+    // Provide details for how to encode to JSON from an instance of this type
+    func encode(to encoder: Encoder) throws {
+        
+        var container = encoder.container(keyedBy: TaskCodingKeys.self)
+
+        // Everything is encoded into String types
+        try container.encode(name, forKey: .name)
+        try container.encode(country, forKey: .country)
+        try container.encode(rating.rawValue, forKey: .rating)
+        try container.encode(description, forKey: .description)
+        
+    }
 }
 
 let testData = [

@@ -35,7 +35,7 @@ struct AddLocation: View {
                         Text(Rating.two.rawValue).tag(Rating.two)
                         Text(Rating.one.rawValue).tag(Rating.one)
                     }
-                    .pickerStyle(SegmentedPickerStyle())
+                    .pickerStyle(DefaultPickerStyle())
                     
                     TextField("description", text: $description)
 
