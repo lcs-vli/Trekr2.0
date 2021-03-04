@@ -8,11 +8,11 @@
 import Foundation
 
 class LocationStore: ObservableObject {
-    @Published var locations: [Location]
+    var places: [Location]
 
     init(locations: [Location] = []) {
-        self.locations = locations
+        self.places = locations
     }
 }
 
-let testStore = LocationStore(locations: testData)
+var testStore = LocationStore(locations: testData)

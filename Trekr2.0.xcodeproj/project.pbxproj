@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5461120725C3663900784C1E /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5461120625C3663900784C1E /* Location.swift */; };
+		54B3C22B25F0691500606D1A /* AddCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B3C22A25F0691500606D1A /* AddCountry.swift */; };
+		54B3C22C25F0691500606D1A /* AddCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B3C22A25F0691500606D1A /* AddCountry.swift */; };
 		54EEACE425C31C3100F292CE /* Trekr2_0App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EEACD125C31C2C00F292CE /* Trekr2_0App.swift */; };
 		54EEACE525C31C3100F292CE /* Trekr2_0App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EEACD125C31C2C00F292CE /* Trekr2_0App.swift */; };
 		54EEACE625C31C3100F292CE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EEACD225C31C2C00F292CE /* ContentView.swift */; };
@@ -23,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		5461120625C3663900784C1E /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		54B3C22A25F0691500606D1A /* AddCountry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCountry.swift; sourceTree = "<group>"; };
 		54EEACD125C31C2C00F292CE /* Trekr2_0App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trekr2_0App.swift; sourceTree = "<group>"; };
 		54EEACD225C31C2C00F292CE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		54EEACD325C31C3000F292CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -116,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				54EEACD225C31C2C00F292CE /* ContentView.swift */,
+				54B3C22A25F0691500606D1A /* AddCountry.swift */,
 				54EEAD0425C3251100F292CE /* LocationDetail.swift */,
 				54F5F2BB25C3804600C4D111 /* WorldMap.swift */,
 				54F5F2BF25C3834400C4D111 /* CountryLocation.swift */,
@@ -227,6 +231,7 @@
 				54EEACE625C31C3100F292CE /* ContentView.swift in Sources */,
 				54EEAD0525C3251100F292CE /* LocationDetail.swift in Sources */,
 				5461120725C3663900784C1E /* Location.swift in Sources */,
+				54B3C22B25F0691500606D1A /* AddCountry.swift in Sources */,
 				54EEACE425C31C3100F292CE /* Trekr2_0App.swift in Sources */,
 				54F5F2CC25C38EB300C4D111 /* RandomPic.swift in Sources */,
 			);
@@ -236,6 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54B3C22C25F0691500606D1A /* AddCountry.swift in Sources */,
 				54EEACE725C31C3100F292CE /* ContentView.swift in Sources */,
 				54EEACE525C31C3100F292CE /* Trekr2_0App.swift in Sources */,
 			);

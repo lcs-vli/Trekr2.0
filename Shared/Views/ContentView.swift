@@ -23,10 +23,13 @@ struct ContentView: View {
     
     @ObservedObject var store: LocationStore
     
+    // Controls whether the add task is showing
+    @State private var showingAddCountry = false
+    
     var body: some View {
         
         List{
-            ForEach(store.locations) { location in
+            ForEach(store.places) { location in
                 LocationCell(location: location)
             }
             
@@ -38,22 +41,21 @@ struct ContentView: View {
             }
         }
         .navigationTitle("Location")
+    
         .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing){
-                EditButton()
-            }
-            ToolbarItem(placement: .navigationBarLeading){
-                Button("Add", action: placeholder)
+            ToolbarItem(placement: .primaryAction){
+                Button("Add"){
+                    showingAddCountry = true
+                }
             }
         }
         
-    }
-    
-    func placeholder(){
-        withAnimation {
-            store.locations.append(Location(name: "hi", country: " ", image: " ", rating: " ", description: " ", latitude: 1, longitude: 2))
+        .sheet(isPresented: $showingAddCountry) {
+            AddCountry(store: testStore, showing: $showingAddCountry)
         }
+        
     }
+
     
     
 }
