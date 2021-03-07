@@ -24,7 +24,7 @@ struct AddLocation: View {
         NavigationView {
             VStack {
                 Form {
-                    TextField("Name", text: $name)
+                    TextField("Name: only letters and spaces", text: $name)
                     
                     TextField("country", text: $country)
                     
@@ -37,9 +37,9 @@ struct AddLocation: View {
                     }
                     .pickerStyle(DefaultPickerStyle())
                     
-                    TextField("description", text: $description)
-
+                    TextField("description: less than 400 characters", text: $description)
                 }
+    
             }
             .navigationTitle("New Location")
             .toolbar {
@@ -47,6 +47,7 @@ struct AddLocation: View {
                     Button("Save") {
                         saveTask()
                     }
+                    .disabled(checkInput(name: name, country: country, description: description))
                 }
             }
         }
@@ -63,6 +64,21 @@ struct AddLocation: View {
         // Dismiss this view
         showing = false
 
+    }
+    
+    func checkInput(name: String, country: String, description: String) -> Bool{
+        for chr in name {
+            if (!(chr >= "a" && chr <= "z") && !(chr >= "A" && chr <= "Z") && !(chr == " ")) {
+                return true
+            }
+        }
+        if country.count == 0{
+            return true
+        }
+        if description.count >= 400  || description.count == 0{
+            return true
+        }
+        return false
     }
 
 }

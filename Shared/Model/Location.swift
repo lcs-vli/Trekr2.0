@@ -8,7 +8,7 @@
 import Foundation
 
 // Identify what properties should be read to and written from JSON
-enum TaskCodingKeys: CodingKey {
+enum LocationCodingKeys: CodingKey {
     case name
     case country
     case rating
@@ -35,7 +35,7 @@ class Location: Identifiable, ObservableObject, Codable {
     
     // Provide details for how to decode from JSON into an instance of this data type
     required init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: TaskCodingKeys.self)
+        let container = try decoder.container(keyedBy: LocationCodingKeys.self)
         
         // Decode "name" property into an instance of the String type
         self.name = try container.decode(String.self, forKey: .name)
@@ -50,7 +50,7 @@ class Location: Identifiable, ObservableObject, Codable {
     // Provide details for how to encode to JSON from an instance of this type
     func encode(to encoder: Encoder) throws {
         
-        var container = encoder.container(keyedBy: TaskCodingKeys.self)
+        var container = encoder.container(keyedBy: LocationCodingKeys.self)
 
         // Everything is encoded into String types
         try container.encode(name, forKey: .name)

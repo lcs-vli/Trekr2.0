@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5461120725C3663900784C1E /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5461120625C3663900784C1E /* Location.swift */; };
+		5498783325F1509900A9E2FA /* AddImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5498783225F1509900A9E2FA /* AddImage.swift */; };
 		54B3C22B25F0691500606D1A /* AddLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B3C22A25F0691500606D1A /* AddLocation.swift */; };
 		54B3C22C25F0691500606D1A /* AddLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B3C22A25F0691500606D1A /* AddLocation.swift */; };
 		54B3C23225F06BA700606D1A /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B3C23125F06BA700606D1A /* Rating.swift */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		5461120625C3663900784C1E /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		5498783225F1509900A9E2FA /* AddImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddImage.swift; sourceTree = "<group>"; };
 		54B3C22A25F0691500606D1A /* AddLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocation.swift; sourceTree = "<group>"; };
 		54B3C23125F06BA700606D1A /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
 		54EEACD125C31C2C00F292CE /* Trekr2_0App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trekr2_0App.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				5461120625C3663900784C1E /* Location.swift */,
 				54B3C23125F06BA700606D1A /* Rating.swift */,
 				54F5F2B725C367A900C4D111 /* LocationStore.swift */,
+				5498783225F1509900A9E2FA /* AddImage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5498783325F1509900A9E2FA /* AddImage.swift in Sources */,
 				54F5F2C025C3834400C4D111 /* CountryLocation.swift in Sources */,
 				54F5F2B825C367A900C4D111 /* LocationStore.swift in Sources */,
 				54B3C23225F06BA700606D1A /* Rating.swift in Sources */,
