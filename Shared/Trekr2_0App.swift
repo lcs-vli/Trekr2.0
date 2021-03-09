@@ -23,22 +23,6 @@ struct Trekr2_0App: App {
                     Text("Locations")
                 }
                 
-//                NavigationView {
-//                    WorldMap(store: testStore)
-//                }
-//                .tabItem {
-//                    Image(systemName: "map")
-//                    Text("Map")
-//                }
-                
-                NavigationView {
-                    RandomPic()
-                }
-                .tabItem {
-                    Image(systemName: "star.fill")
-                    Text("Random Pic")
-                }
-                
             }
         }
     }

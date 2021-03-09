@@ -17,13 +17,13 @@ struct ContentView: View {
     var body: some View {
         
         List{
-            ForEach(store.places) { location in
+            ForEach(store.locations) { location in
                 LocationCell(location: location)
             }
             
             HStack {
                 Spacer()
-                Text("\(store.places.count) Locations")
+                Text("\(store.locations.count) Locations")
                     .foregroundColor(.secondary)
                 Spacer()
             }
@@ -45,7 +45,7 @@ struct ContentView: View {
             
             // Save the list of tasks
             let encoder = JSONEncoder()
-            if let encoded = try? encoder.encode(store.places) {
+            if let encoded = try? encoder.encode(store.locations) {
                 print("Saving locations list now, app has been backgrounded or quit...")
                 // Actually save the tasks to UserDefaults
                 UserDefaults.standard.setValue(encoded, forKey: "places")

@@ -13,6 +13,7 @@ enum Rating: String, Decodable  {
     case three = "⭐️⭐️⭐️"
     case two = "⭐️⭐️"
     case one = "⭐️"
+    case zero = " "
 }
 
 let noSpecifiedPriorityLevel = "None"

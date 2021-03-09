@@ -10,13 +10,13 @@ import Foundation
 class LocationStore: ObservableObject {
     
     // MARK: Stored properties
-    @Published var places: [Location] {
+    @Published var locations: [Location] {
         
         //this property observer will fire when a locatoin is added
         didSet {
             
             let encoder = JSONEncoder()
-            if let encoded = try? encoder.encode(places) {
+            if let encoded = try? encoder.encode(locations) {
                 
                 print("Saving locations list now...")
                 
@@ -37,16 +37,16 @@ class LocationStore: ObservableObject {
             // .self is required to reference the type objecct
             // So by saying [Locatoin].self we are saying "decode the data from readItems into a structure of type [Location]"
             if let decoded = try? decoder.decode([Location].self, from: readItems) {
-                self.places = decoded
+                self.locations = decoded
             } else {
-                self.places = []
+                self.locations = []
             }
             return
 
         } else {
             
             // If nothing could be loaded from the app bundle, or data could not be decoded, show whatever reminders were passed in to the initializer
-            self.places = locations
+            self.locations = locations
             
         }
     }

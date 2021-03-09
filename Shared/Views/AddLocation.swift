@@ -14,7 +14,7 @@ struct AddLocation: View {
     // Details of the new location
     @State private var name = ""
     @State private var country = ""
-    @State private var rating = Rating.five
+    @State private var rating = Rating.zero
     @State private var description = ""
     
     // Whether to show this view
@@ -56,7 +56,7 @@ struct AddLocation: View {
     func saveTask() {
         
         // Add the task to the list of tasks
-        store.places.append(Location(name: name,
+        store.locations.append(Location(name: name,
                                      country: country,
                                      rating: rating,
                                      description: description))
