@@ -1,6 +1,6 @@
 //
 //  Rating.swift
-//  Trekr2.0
+//  travelDiary
 //
 //  Created by Li, Muchen on 2021/3/3.
 //

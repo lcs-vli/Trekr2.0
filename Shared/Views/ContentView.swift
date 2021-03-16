@@ -20,6 +20,8 @@ struct ContentView: View {
             ForEach(store.locations) { location in
                 LocationCell(location: location)
             }
+            .onMove(perform: moveLocations)
+            .onDelete(perform: deleteLocations)
             
             HStack {
                 Spacer()
@@ -29,14 +31,18 @@ struct ContentView: View {
             }
         }
         .navigationTitle("Location")
-    
         .toolbar {
             ToolbarItem(placement: .primaryAction){
                 Button("Add"){
                     showingAddLocation = true
                 }
             }
+            
+            ToolbarItem(placement: .navigationBarTrailing){
+                EditButton()
+            }
         }
+        
         .sheet(isPresented: $showingAddLocation) {
             AddLocation(store: testStore, showing: $showingAddLocation)
         }
@@ -51,6 +57,18 @@ struct ContentView: View {
                 UserDefaults.standard.setValue(encoded, forKey: "places")
             }
 
+        }
+    }
+    
+    func moveLocations(from: IndexSet, to: Int){
+        withAnimation{
+            store.locations.move(fromOffsets: from, toOffset: to)
+        }
+    }
+    
+    func deleteLocations(offsets: IndexSet){
+        withAnimation{
+            store.locations.remove(atOffsets: offsets)
         }
     }
 

@@ -1,6 +1,6 @@
 //
 //  LocationDetail.swift
-//  Trekr2.0 (iOS)
+//  travelDiary (iOS)
 //
 //  Created by Li, Muchen on 2021/1/28.
 //
