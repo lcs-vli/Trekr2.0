@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		545694A52600F1660012F6F7 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545694A42600F1660012F6F7 /* ImagePicker.swift */; };
 		5461120725C3663900784C1E /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5461120625C3663900784C1E /* Location.swift */; };
 		54B3C22B25F0691500606D1A /* AddLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B3C22A25F0691500606D1A /* AddLocation.swift */; };
 		54B3C22C25F0691500606D1A /* AddLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B3C22A25F0691500606D1A /* AddLocation.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		545694A42600F1660012F6F7 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		5461120625C3663900784C1E /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		54B3C22A25F0691500606D1A /* AddLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocation.swift; sourceTree = "<group>"; };
 		54B3C23125F06BA700606D1A /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				5461120625C3663900784C1E /* Location.swift */,
 				54B3C23125F06BA700606D1A /* Rating.swift */,
 				54F5F2B725C367A900C4D111 /* LocationStore.swift */,
+				545694A42600F1660012F6F7 /* ImagePicker.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				54EEACE625C31C3100F292CE /* ContentView.swift in Sources */,
 				54EEAD0525C3251100F292CE /* LocationDetail.swift in Sources */,
 				5461120725C3663900784C1E /* Location.swift in Sources */,
+				545694A52600F1660012F6F7 /* ImagePicker.swift in Sources */,
 				54B3C22B25F0691500606D1A /* AddLocation.swift in Sources */,
 				54EEACE425C31C3100F292CE /* travelDiaryApp.swift in Sources */,
 			);

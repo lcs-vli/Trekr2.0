@@ -37,11 +37,12 @@ struct ContentView: View {
                     showingAddLocation = true
                 }
             }
-            
+
             ToolbarItem(placement: .navigationBarTrailing){
                 EditButton()
             }
         }
+
         
         .sheet(isPresented: $showingAddLocation) {
             AddLocation(store: testStore, showing: $showingAddLocation)
