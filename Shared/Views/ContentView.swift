@@ -11,7 +11,7 @@ struct ContentView: View {
     
     @ObservedObject var store: LocationStore
     
-    // Controls whether the add task is showing
+    // Controls whether the AddLocation is showing
     @State private var showingAddLocation = false
     
     var body: some View {

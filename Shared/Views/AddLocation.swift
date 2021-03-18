@@ -45,7 +45,7 @@ struct AddLocation: View {
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
                     Button("Save") {
-                        saveTask()
+                        saveLocations()
                     }
                     .disabled(checkInput(name: name, country: country, description: description))
                 }
@@ -53,9 +53,9 @@ struct AddLocation: View {
         }
     }
     
-    func saveTask() {
+    func saveLocations() {
         
-        // Add the task to the list of tasks
+        // Add the location to the list of locations
         store.locations.append(Location(name: name,
                                      country: country,
                                      rating: rating,

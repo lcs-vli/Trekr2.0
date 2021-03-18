@@ -27,7 +27,7 @@ class LocationStore: ObservableObject {
     
     // MARK: Initializer
     init(locations: [Location] = []) {
-        // Try to read the existing tasks from the app bundle
+        // Try to read the existing locations from the app bundle
         if let readItems = UserDefaults.standard.data(forKey: "places") {
             
             let decoder = JSONDecoder()
@@ -45,7 +45,7 @@ class LocationStore: ObservableObject {
 
         } else {
             
-            // If nothing could be loaded from the app bundle, or data could not be decoded, show whatever reminders were passed in to the initializer
+            // If nothing could be loaded from the app bundle, or data could not be decoded, show whatever locations were passed in to the initializer
             self.locations = locations
             
         }

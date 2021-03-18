@@ -12,17 +12,13 @@ struct LocationDetail: View {
     var location: Location
     
     @State private var zoomed = false
-    @State private var image : Image?
-   
-    @State private var showingImagePicker = false
-    @State private var inputImage: UIImage?
-    
+
     var body: some View {
         
-        NavigationView{
+        ScrollView{
             
             VStack{
-                //Spacer(minLength: 0)
+                Spacer(minLength: 0)
 
                 HStack {
                     Text(location.country)
@@ -32,54 +28,22 @@ struct LocationDetail: View {
                     Spacer()
                 }
                 .padding(.horizontal)
-                
-                ZStack {
-                    Rectangle()
-                        .fill(Color.secondary)
-                    
-                    if image != nil {
-                        image?
-                            .resizable()
-                            .scaledToFit()
-                    } else {
-                        Text("Tap to select a picture")
-                            .foregroundColor(.white)
-                            .font(.headline)
-                    }
-                }
-                .onTapGesture {
-                    self.showingImagePicker = true
-                }
-                
+      
                 HStack{
                     Text("Rating: ")
                         .font(.title3)
                         .bold()
                         .padding(.vertical)
                     Text(location.rating.rawValue)
-                    
                 }
                 .padding(.horizontal)
                 
                 Text(location.description)
                     .padding(.horizontal)
                     .padding(.bottom)
-            
-                Spacer()
             }
-            .padding()
-            
         }
         .navigationTitle(location.name)
-        .sheet(isPresented: $showingImagePicker, onDismiss: loadImage) {
-            ImagePicker(image: self.$inputImage)
-        }
-        
-    }
-    
-    func loadImage() {
-        guard let inputImage = inputImage else { return }
-        image = Image(uiImage: inputImage)
     }
 }
 

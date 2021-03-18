@@ -19,11 +19,8 @@ class Location: Identifiable, ObservableObject, Codable {
     var id = UUID()
     var name: String
     var country: String
-    //var image: String
     var rating: Rating
     var description: String
-    //var latitude: Double
-    //var longitude: Double
 
     internal init(id: UUID = UUID(), name: String, country: String, rating: Rating, description: String) {
         self.id = id
@@ -62,9 +59,9 @@ class Location: Identifiable, ObservableObject, Codable {
 }
 
 let testData = [
-    Location(name: "Toronto", country: "Canada", rating: .five, description: "A really nice place. Lots of malls."),
-    Location(name: "Beijing", country: "China", rating: .five, description: "My home town"),
-    Location(name: "Seattle", country: "U.S.", rating: .three, description: "My cousin's place"),
+    Location(name: "Toronto", country: "Canada", rating: .five, description: "Toronto is a really nice place with lots of malls."),
+    Location(name: "Beijing", country: "China", rating: .five, description: "The restaurants are the best."),
+    Location(name: "Seattle", country: "U.S.", rating: .three, description: "The weather is nice when it's not raining."),
     Location(name: "Tokyo", country: "Japan", rating: .two, description: "We go there almost every break. It is so much fun."),
-    Location(name: "Chengde", country: "China", rating: .one, description: "We went there this summer with our dog.")
+    Location(name: "Chengde", country: "China", rating: .one, description: "We went there this summer with our dog. It was our dog's first trip.")
 ]
