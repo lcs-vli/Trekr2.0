@@ -34,13 +34,9 @@ class Location: Identifiable, ObservableObject, Codable {
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: LocationCodingKeys.self)
         
-        // Decode "name" property into an instance of the String type
         self.name = try container.decode(String.self, forKey: .name)
-        // Decode "country" property into an instance of the String type
         self.country = try container.decode(String.self, forKey: .country)
-        // Decode "rating" property into an instance of the Rating type
         self.rating = try container.decode(Rating.self, forKey: .rating)
-        // Decode "description" property into an instance of the String type
         self.description = try container.decode(String.self, forKey: .description)
     }
     
@@ -59,9 +55,24 @@ class Location: Identifiable, ObservableObject, Codable {
 }
 
 let testData = [
-    Location(name: "Toronto", country: "Canada", rating: .five, description: "Toronto is a really nice place with lots of malls."),
-    Location(name: "Beijing", country: "China", rating: .five, description: "The restaurants are the best."),
-    Location(name: "Seattle", country: "U.S.", rating: .three, description: "The weather is nice when it's not raining."),
-    Location(name: "Tokyo", country: "Japan", rating: .two, description: "We go there almost every break. It is so much fun."),
-    Location(name: "Chengde", country: "China", rating: .one, description: "We went there this summer with our dog. It was our dog's first trip.")
+    Location(name: "Toronto",
+             country: "Canada",
+             rating: .five,
+             description: "Toronto is a really nice place with lots of malls."),
+    Location(name: "Beijing",
+             country: "China",
+             rating: .five,
+             description: "The restaurants are the best."),
+    Location(name: "Seattle",
+             country: "U.S.",
+             rating: .three,
+             description: "The weather is nice when it's not raining."),
+    Location(name: "Tokyo",
+             country: "Japan",
+             rating: .two,
+             description: "We go there almost every break. It is so much fun."),
+    Location(name: "Chengde",
+             country: "China",
+             rating: .one,
+             description: "We went there this summer with our dog. It was our dog's first trip.")
 ]
